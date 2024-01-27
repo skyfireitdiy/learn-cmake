@@ -1,0 +1,3 @@
+#define version_VERSION_MAJOR @version_VERSION_MAJOR@
+#define version_VERSION_MINOR @version_VERSION_MINOR@
+#define MYKEY "@MYKEY@"
