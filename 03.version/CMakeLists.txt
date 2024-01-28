@@ -12,7 +12,7 @@ configure_file(version.h.in version.h)
 
 add_executable(version)
 
-target_sources(version PUBLIC main.cpp)
+target_sources(version PRIVATE main.cpp)
 
 # 记得添加config的输出路径，输出默认在二进制产物目录，可以修改改变
-target_include_directories(version PUBLIC "${PROJECT_BINARY_DIR}")
+target_include_directories(version PRIVATE "${PROJECT_BINARY_DIR}")
