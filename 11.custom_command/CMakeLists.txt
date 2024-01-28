@@ -15,6 +15,13 @@ add_custom_command(
     COMMAND echo "generate git info"
 )
 
+add_custom_command(
+    TARGET custom_command
+    POST_BUILD
+    COMMAND rm ${CMAKE_CURRENT_BINARY_DIR}/version.h
+    COMMAND echo "delete ${CMAKE_CURRENT_BINARY_DIR}/version.h"
+    )
+
 # 添加一个自定义target，依赖于自定义命令的产出
 add_custom_target(
     empty_target
